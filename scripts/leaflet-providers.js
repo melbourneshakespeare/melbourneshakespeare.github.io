@@ -505,6 +505,7 @@
 				attribution: '{attribution.OpenStreetMap} &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 				subdomains: 'abcd',
 				maxZoom: 19,
+				apikey: 'cb1_5euv_1_64160aefa9dc972128505f36',
 				variant: 'light_all'
 			},
 			variants: {
