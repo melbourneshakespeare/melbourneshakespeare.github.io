@@ -16,8 +16,14 @@
     crossorigin=""></script>
 
   <!-- Load Leaflet basemap providers -->
-  <script src="https://unpkg.com/leaflet-providers@1.10.2/leaflet-providers.js"></script>
-
+  <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
+  <script>
+    // Carto basemaps now need an API key (https://carto.com/basemaps/apikey).
+    // Override the CartoDB provider so its tile URLs include the key.
+    L.TileLayer.Provider.providers.CartoDB.url =
+      'https://{s}.basemaps.cartocdn.com/{variant}/{z}/{x}/{y}{r}.png?key={apikey}';
+    L.TileLayer.Provider.providers.CartoDB.options.apikey = 'cb1_5euv_1_64160aefa9dc972128505f36';
+  </script>
   <!-- Load jQuery  -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
